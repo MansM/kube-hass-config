@@ -15,5 +15,9 @@ hue:
       allow_unreachable: true
       allow_hue_groups: true
 
+sensor:
+  - platform: growatt_server
+    username: !secret growatt.user
+    password: !secret growatt.pass
 # http:
 # frontend:
