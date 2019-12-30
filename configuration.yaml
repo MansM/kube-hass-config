@@ -10,4 +10,4 @@ hue:
       allow_hue_groups: true
 
 # http:
-frontend:
+# frontend:
