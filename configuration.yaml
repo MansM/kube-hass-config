@@ -1,6 +1,7 @@
-homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Home
+# homeassistant:
+#   # Name of the location where Home Assistant is running
+#   name: Home
+#   unit_system: metric
 
 hue:
   bridges:
