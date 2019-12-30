@@ -8,5 +8,5 @@ hue:
       allow_unreachable: true
       allow_hue_groups: true
 
-http:
+# http:
 frontend:
