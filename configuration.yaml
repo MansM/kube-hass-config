@@ -21,3 +21,9 @@ sensor:
     password: !secret growatt.pass
 # http:
 # frontend:
+
+person:
+  name: mans
+  id: mans123
+  device_trackers:
+    - device_tracker.iphone_van_mans
