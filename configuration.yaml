@@ -3,6 +3,8 @@
 #   name: Home
 #   unit_system: metric
 
+default_config:
+
 hue:
   bridges:
     - host: 10.0.2.213
