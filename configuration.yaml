@@ -7,3 +7,6 @@ hue:
     - host: 10.0.2.213
       allow_unreachable: true
       allow_hue_groups: true
+
+http:
+
