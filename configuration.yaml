@@ -1,0 +1,9 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+
+hue:
+  bridges:
+    - host: 10.0.2.213
+      allow_unreachable: true
+      allow_hue_groups: true
