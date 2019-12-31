@@ -34,10 +34,5 @@ person:
       - device_tracker.cat7
       - device_tracker.cat7_2
 
-# unifi:
-#   controllers:
-#     - host: !secret unifi.ip
-#       site: !secret unifi.site
-#       ssid_filter:
-#         - 'HomeSSID'
-#         - 'IoTSSID'
+media_player:
+  - platform: webostv
