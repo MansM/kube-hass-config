@@ -24,12 +24,12 @@ sensor:
 
 person:
   - name: mans
-    id: mans123
+    id: !secret mans.id
     device_trackers:
       - device_tracker.iphone_van_mans
       - device_tracker.iphone_van_mans_2
   - name: rianne
-    id: rw123
+    id: !secret rianne.id
     device_trackers:
       - device_tracker.cat7
 
