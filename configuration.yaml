@@ -23,7 +23,20 @@ sensor:
 # frontend:
 
 person:
-  name: mans
-  id: mans123
-  device_trackers:
-    - device_tracker.iphone_van_mans
+  - name: mans
+    id: mans123
+    device_trackers:
+      - device_tracker.iphone_van_mans
+      - device_tracker.iphone_van_mans_2
+  - name: rianne
+    id: rw123
+    device_trackers:
+      - device_tracker.cat7
+
+# unifi:
+#   controllers:
+#     - host: !secret unifi.ip
+#       site: !secret unifi.site
+#       ssid_filter:
+#         - 'HomeSSID'
+#         - 'IoTSSID'
