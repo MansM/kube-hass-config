@@ -37,3 +37,6 @@ person:
 media_player:
   - platform: webostv
     host: !secret tv.ip
+
+lovelace:
+  mode: yaml

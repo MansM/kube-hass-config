@@ -1,0 +1,68 @@
+title: Thuis
+# Include external resources
+# resources:
+#   - url: /local/my-custom-card.js
+#     type: js
+#   - url: /local/my-webfont.css
+#     type: css
+
+views:
+    # View tab title.
+  - title: Thuis
+    # Unique path for direct access /lovelace/${path}
+    path: thuis
+    cards:
+      - title: Woonkamer tv
+        type: media-control
+        entity: media_player.lg_webos_smart_tv
+
+      - title: Weer thuis
+        type: weather-forecast
+        entity: weather.thuis
+
+      - title: Mans
+        type: entities
+        entities:
+          - entity: person.mans
+          - entity: sensor.battery_level
+        show_header_toggle: false
+        
+      - title: Rianne
+        type: entities
+        entities:
+          - entity: person.rianne_2
+          - entity: sensor.battery_level_2
+        show_header_toggle: false
+
+      - title: Solar Panels
+        type: entities
+        entities:
+        - entity: sensor.growatt_total_energy_today
+        - entity: sensor.growatt_total_output_power
+        - entity: sensor.growatt_total_lifetime_energy_output
+        show_header_toggle: false
+        
+
+    # Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Second view
+    cards:
+        # Entities card will take a list of entities and show their state.
+      - type: entities
+        # Title of the entities card
+        title: Example
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - light.kitchen
+          - switch.ac
+          - entity: light.living_room
+            # Override the name to use
+            name: LR Lights
+
+        # The markdown card will render markdown text.
+      - type: markdown
+        title: Lovelace
+        content: >
+          Welcome to your **Lovelace UI**.
