@@ -67,3 +67,7 @@ camera:
 mqtt:
   broker: !secret mqtt.ip
   discovery: true
+
+customize:
+  person.mans:
+    entity_picture: !secret mans.image
