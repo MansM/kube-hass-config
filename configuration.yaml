@@ -8,6 +8,7 @@ homeassistant:
   time_zone: Europe/Amsterdam
   packages:
     vacation: !include packages/vacation.yaml
+  customize: !include customize.yaml
 
 default_config:
 group:          !include_dir_merge_named groups
@@ -67,7 +68,4 @@ camera:
 mqtt:
   broker: !secret mqtt.ip
   discovery: true
-
-customize:
-  person.mans:
-    entity_picture: !secret mans.image
+  

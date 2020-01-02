@@ -1,0 +1,2 @@
+person.mans:
+  entity_picture: !secret mans.image
