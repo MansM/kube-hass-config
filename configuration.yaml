@@ -22,6 +22,12 @@ sensor:
   - platform: growatt_server
     username: !secret growatt.user
     password: !secret growatt.pass
+  
+  - platform: github
+    access_token: !secret github_access_token
+    repositories:
+      - path: 'home-assistant/home-assistant'
+      - path: 'containous/traefik'
 # http:
 # frontend:
 
