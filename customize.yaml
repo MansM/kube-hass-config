@@ -1,4 +1,4 @@
 person.mans:
   entity_picture: !secret mans.image
-person.rianne:
+person.rianne_2:
   entity_picture: !secret rianne.image
