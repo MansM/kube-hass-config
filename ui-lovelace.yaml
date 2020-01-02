@@ -12,9 +12,13 @@ views:
     # Unique path for direct access /lovelace/${path}
     path: thuis
     cards:
-      - title: Woonkamer tv
-        type: media-control
-        entity: media_player.lg_webos_smart_tv
+      - title: Lights
+        type: entities
+        entities:
+          - group.tv
+          - group.salontafel
+          - group.eettafel
+        show_header_toggle: false
 
       - title: Weer thuis
         type: weather-forecast
@@ -42,14 +46,30 @@ views:
         - entity: sensor.growatt_total_lifetime_energy_output
         show_header_toggle: false
 
-      - title: Lights
+      - title: Woonkamer tv
+        type: media-control
+        entity: media_player.lg_webos_smart_tv
+        
+
+  - icon: mdi: lightbulb-multiple
+    title: Lights
+    cards:
+      - title: TV
         type: entities
         entities:
-          - group.tv
-          - group.salontafel
-          - group.eettafel
-        show_header_toggle: false
-        
+          - light.ikea_links
+          - light.ikea_rechts_nieuw
+      
+      - title: Salontafel
+        type: entities
+        entities:
+          - light.plafondlamp
+      
+      - title: Eettafel
+        type: entities
+        entities:
+          - light.hue_color_pendant_down_1
+          - light.hue_color_pendant_up_1
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
