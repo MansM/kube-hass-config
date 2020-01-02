@@ -52,6 +52,7 @@ views:
       - type: entities
         # Title of the entities card
         title: switches
+        show_header_toggle: false
         # The entities here will be shown in the same order as specified.
         # Each entry is an entity ID or a map with extra options.
         entities:
