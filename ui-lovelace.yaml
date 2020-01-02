@@ -51,7 +51,7 @@ views:
         entity: media_player.lg_webos_smart_tv
         
 
-  - icon: mdi: lightbulb-multiple
+  - icon: mdi:lightbulb-multiple
     title: Lights
     cards:
       - title: TV
