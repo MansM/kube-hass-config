@@ -24,19 +24,23 @@ views:
         type: weather-forecast
         entity: weather.thuis
 
-      - title: Mans
-        type: entities
-        entities:
-          - entity: person.mans
-          - entity: sensor.battery_level
+      - type: horizontal-stack
+        title: Locaties
         show_header_toggle: false
-        
-      - title: Rianne
-        type: entities
-        entities:
-          - entity: person.rianne_2
-          - entity: sensor.battery_level_2
-        show_header_toggle: false
+        cards:
+        - title: Mans
+          type: entities
+          entities:
+            - entity: person.mans
+            - entity: sensor.battery_level
+          show_header_toggle: false
+          
+        - title: Rianne
+          type: entities
+          entities:
+            - entity: person.rianne_2
+            - entity: sensor.battery_level_2
+          show_header_toggle: false
 
       - title: Solar Panels
         type: entities
