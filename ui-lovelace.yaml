@@ -52,15 +52,8 @@ views:
 
       - type: picture-glance
         title: Voordeur
-        entities:
-          - light.voordeur
         camera_image: camera.camera
 
-      - type: picture-entity
-        entity: camera.camera
-        camera_view: auto
-        image: !secret camera.snap
-        
 
   - icon: mdi:lightbulb-multiple
     title: Lights
