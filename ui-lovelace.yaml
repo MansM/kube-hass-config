@@ -54,7 +54,7 @@ views:
         title: Voordeur
         entities:
           - light.voordeur
-        camera_image: camera.camera
+        camera_image: !secret camera.snap
         
 
   - icon: mdi:lightbulb-multiple
