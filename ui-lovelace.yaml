@@ -41,6 +41,14 @@ views:
         - entity: sensor.growatt_total_output_power
         - entity: sensor.growatt_total_lifetime_energy_output
         show_header_toggle: false
+
+      - title: Lights
+        type: entities
+        entities:
+          - group.tv
+          - group.salontafel
+          - group.eettafel
+        show_header_toggle: false
         
 
     # Specify a tab icon if you want the view tab to be an icon.
