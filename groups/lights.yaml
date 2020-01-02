@@ -1,0 +1,13 @@
+tv:
+  entities:
+    - light.ikea_links
+    - light.ikea_rechts_nieuw
+
+salontafel:
+  entities:
+    - light.plafondlamp
+
+eettafel:
+  entities:
+    - light.hue_color_pendant_down_1
+    - light.hue_color_pendant_up_1

@@ -10,6 +10,7 @@ homeassistant:
     vacation: !include packages/vacation.yaml
 
 default_config:
+group:          !include_dir_merge_named groups
 
 hue:
   bridges:
