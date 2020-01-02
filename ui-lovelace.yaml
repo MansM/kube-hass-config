@@ -52,6 +52,7 @@ views:
 
       - type: picture-glance
         title: Voordeur
+        entities: []
         camera_image: camera.camera
 
 
