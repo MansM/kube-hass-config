@@ -55,3 +55,10 @@ notify:
     host: !secret tv.ip
     name: woonkamertv
     filename: webostv.conf
+
+camera:
+  - platform: generic
+    name: Camera
+    still_image_url: !secret camera.snap
+    stream_source: !secret camera.url
+    verify_ssl: false
