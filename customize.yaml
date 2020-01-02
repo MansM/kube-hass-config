@@ -4,3 +4,9 @@ person.mans:
 person.rianne_2:
   entity_picture: !secret rianne.image
   friendly_name: Rianne
+group.tv:
+  friendly_name: TV
+group.eettafel:
+  friendly_name: Eettafel
+group.salontafel:
+  friendly_name: Salontafel
