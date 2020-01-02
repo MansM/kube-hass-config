@@ -42,3 +42,9 @@ media_player:
 
 lovelace:
   mode: yaml
+
+notify:
+  - platform: webostv
+    host: !secret tv.ip
+    name: woonkamertv
+    filename: webostv.conf
