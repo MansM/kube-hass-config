@@ -55,6 +55,10 @@ views:
         entities:
           - light.voordeur
         camera_image: camera.camera
+
+      - type: picture-entity
+        entity: camera.camera
+        camera_view: live
         
 
   - icon: mdi:lightbulb-multiple
