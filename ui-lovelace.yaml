@@ -58,7 +58,7 @@ views:
 
       - type: picture-entity
         entity: camera.camera
-        camera_view: live
+        camera_view: auto
         
 
   - icon: mdi:lightbulb-multiple
