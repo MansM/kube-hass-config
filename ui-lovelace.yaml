@@ -100,6 +100,7 @@ views:
       #       name: LR Lights
       - type: plant-status
         entity: plant.keuken_plant
+        name: Paprika (keuken)
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace
