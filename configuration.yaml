@@ -43,7 +43,6 @@ person:
     id: !secret rianne.id
     device_trackers:
       - device_tracker.cat7
-      - device_tracker.cat7_2
 
 media_player:
   - platform: webostv
