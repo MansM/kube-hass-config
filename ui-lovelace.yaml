@@ -98,8 +98,8 @@ views:
       #     - entity: light.living_room
       #       # Override the name to use
       #       name: LR Lights
-  - type: plant-status
-    entity: plant.keuken_plant
+      - type: plant-status
+        entity: plant.keuken_plant
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace
