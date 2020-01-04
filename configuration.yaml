@@ -81,6 +81,6 @@ plant:
       battery: sensor.mi_flora_battery
       temperature: sensor.mi_flora_temperature
       conductivity: sensor.mi_flora_conductivity
-      brightness: sensor.mi_flora_brightness
+      brightness: sensor.mi_flora_light_intensity
     min_moisture: 20
   
