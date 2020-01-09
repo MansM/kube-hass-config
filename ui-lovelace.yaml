@@ -20,6 +20,13 @@ views:
           - group.eettafel
         show_header_toggle: false
 
+      - title: Temperatuur Woonkamer
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.nodeID_9_temperature
+          - sensor.mi_flora_temperature
+
       - title: Weer thuis
         type: weather-forecast
         entity: weather.thuis
