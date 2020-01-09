@@ -10,10 +10,3 @@ group.eettafel:
   friendly_name: Eettafel
 group.salontafel:
   friendly_name: Salontafel
-
-sensor.nodeid_9_temperature:
-  friendly_name: Rookmelder
-  entity_picture: mdi:smoke-detector
-sensor.mi_flora_temperature:
-  friendly_name: Mi Flora
-  entity_picture: mdi:flower
