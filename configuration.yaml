@@ -56,11 +56,11 @@ webostv:
 lovelace:
   mode: yaml
 
-notify:
-  - platform: webostv
-    host: !secret tv.ip
-    name: woonkamertv
-    filename: webostv.conf
+# notify:
+#   - platform: webostv
+#     host: !secret tv.ip
+#     name: media_player.woonkamer_tv
+#     filename: webostv.conf
 
 camera:
   - platform: generic
