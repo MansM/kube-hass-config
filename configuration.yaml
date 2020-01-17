@@ -44,9 +44,9 @@ person:
     device_trackers:
       - device_tracker.cat7
 
-media_player:
-  - platform: webostv
-    host: !secret tv.ip
+webostv:
+  name: Woonkamer TV
+  host: !secret tv.ip
 
   # - platform: denon
   #   name: marantz_sr7005
