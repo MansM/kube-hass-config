@@ -109,6 +109,18 @@ views:
       #     - entity: light.living_room
       #       # Override the name to use
       #       name: LR Lights
+
+      - type: entities
+        title: roomba
+        show_header_toggle: false
+        entities:
+          - sensor.roomba_state
+          - sensor.roomba_battery
+          - sensor.roomba_capacity
+          - switch.roomba_clean
+          - switch.roomba_dock
+          - switch.roomba_find
+
       - type: plant-status
         entity: plant.keuken_plant
         name: Paprika (keuken)
