@@ -30,9 +30,13 @@ sensor:
     repositories:
       - path: 'home-assistant/home-assistant'
       - path: 'containous/traefik'
+
+  - platform: thinkingcleaner
 # http:
 # frontend:
-
+switch:
+  - platform: thinkingcleaner
+  
 person:
   - name: mans
     id: !secret mans.id
