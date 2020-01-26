@@ -34,7 +34,7 @@ sensor:
 
   - platform: netdata
     host: '10.0.2.237'
-    port: '19999'
+    port: '19999/host/r710top.localdomain'
     name: r710top.localdomain
     resources:
       cpu:
