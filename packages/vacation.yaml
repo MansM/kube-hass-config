@@ -1,48 +1,47 @@
-vacation:
-  automation:
-    - alias: vakantiemode_lightson
-      trigger:
-        platform: sun
-        event: sunset
-        offset: '-01:00:00'
-      condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: input_boolean.vak_mode
-            state: 'on'
-      action:
-        - service: light.turn_on
-          entity_id:
-            - !secret vakantie.group
-        # - service: notify.slack
-        #   data:
-        #     message: 'Vakantie Mode Lights On'
-        #     target: '#debug'
+automation:
+  - alias: vakantiemode_lightson
+    trigger:
+      platform: sun
+      event: sunset
+      offset: '-01:00:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.vak_mode
+          state: 'on'
+    action:
+      - service: light.turn_on
+        entity_id:
+          - !secret vakantie.group
+      # - service: notify.slack
+      #   data:
+      #     message: 'Vakantie Mode Lights On'
+      #     target: '#debug'
 
-    - alias: vakantiemode_lightsoff
-      trigger:
-        platform: time
-        at: '22:00:00'
-      condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: input_boolean.vak_mode
-            state: 'on'
-      action:
-        # yamllint disable-line rule:line-length
-        - delay: '{{  "00:" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
-        - service: light.turn_off
-          entity_id:
-            - !secret vakantie.group
-        # - service: notify.slack
-        #   data:
-        #     message: 'Vakantie Mode Lights Off'
-        #     target: '#debug'
-  
-  input_boolean:
-    vak_mode:
-      name: Vakantie Modus
-      #initial: off
-      icon: mdi:weather-sunny
+  - alias: vakantiemode_lightsoff
+    trigger:
+      platform: time
+      at: '22:00:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.vak_mode
+          state: 'on'
+    action:
+      # yamllint disable-line rule:line-length
+      - delay: '{{  "00:" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
+      - service: light.turn_off
+        entity_id:
+          - !secret vakantie.group
+      # - service: notify.slack
+      #   data:
+      #     message: 'Vakantie Mode Lights Off'
+      #     target: '#debug'
+
+input_boolean:
+  vak_mode:
+    name: Vakantie Modus
+    #initial: off
+    icon: mdi:weather-sunny
