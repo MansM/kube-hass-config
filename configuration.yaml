@@ -8,6 +8,7 @@ homeassistant:
   time_zone: Europe/Amsterdam
   packages:
     vacation: !include packages/vacation.yaml
+    wasmachine: !include packages/wasmachine.yaml
   customize: !include customize.yaml
 
 default_config:
@@ -36,7 +37,7 @@ sensor:
 # frontend:
 switch:
   - platform: thinkingcleaner
-  
+
 person:
   - name: mans
     id: !secret mans.id
