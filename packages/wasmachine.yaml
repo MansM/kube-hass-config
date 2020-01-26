@@ -1,65 +1,66 @@
-automation: 
-  - alias: set wasmachine op bezig
-    trigger: 
-      - platform: numeric_state
-        entity_id: sensor.nodeID_11_power
-        above: 5
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: input_select.wasmachine_status
-          state: 'uit'
-    action:
-      - service: input_select.select_option
-        data:
-          entity_id: input_select.wasmachine_status
-          option: bezig
+wasmachine:  
+  automation: 
+    - alias: set wasmachine op bezig
+      trigger: 
+        - platform: numeric_state
+          entity_id: sensor.nodeID_11_power
+          above: 5
+      condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: input_select.wasmachine_status
+            state: 'uit'
+      action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.wasmachine_status
+            option: bezig
 
-  - alias: set wasmachine op uit
-    trigger: 
-      - platform: state
-        entity_id: sensor.wasmachine_klaar
-        from: 'false'
-        to: 'true'
-        for:
-          minutes: 2
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: input_select.wasmachine_status        
-          state: 'bezig'
-    action:
-      - service: input_select.select_option
-        data:
-          entity_id: input_select.wasmachine_status
-          option: uit
-      - service: notify.woonkamer_tv
-        data:
-          message: "Was is klaar!"
-      # - service: notify.slack
-      #   data:
-      #     target: "wasmachine"
-      #     message: "Was is klaar!"
-sensor:
-  - platform: template
-    sensors:
-      wasmachine_status:
-        value_template: "{{ states.input_select.wasmachine_status.state }}"
-        friendly_name: 'Wasmachine status'
-      wasmachine_klaar:
-        value_template: > 
-          {%- if (states("sensor.nodeID_11_power")| float ) < 5 -%} 
-            true
-          {%- else -%}
-            false
-          {%- endif -%}
+    - alias: set wasmachine op uit
+      trigger: 
+        - platform: state
+          entity_id: sensor.wasmachine_klaar
+          from: 'false'
+          to: 'true'
+          for:
+            minutes: 2
+      condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: input_select.wasmachine_status        
+            state: 'bezig'
+      action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.wasmachine_status
+            option: uit
+        - service: notify.woonkamer_tv
+          data:
+            message: "Was is klaar!"
+        # - service: notify.slack
+        #   data:
+        #     target: "wasmachine"
+        #     message: "Was is klaar!"
+  sensor:
+    - platform: template
+      sensors:
+        wasmachine_status:
+          value_template: "{{ states.input_select.wasmachine_status.state }}"
+          friendly_name: 'Wasmachine status'
+        wasmachine_klaar:
+          value_template: > 
+            {%- if (states("sensor.nodeID_11_power")| float ) < 5 -%} 
+              true
+            {%- else -%}
+              false
+            {%- endif -%}
 
-input_select:
-  - wasmachine_status:
-      name: wasmachine_status
-      options:
-        - uit
-        - bezig
-      initial: uit
+  input_select:
+    - wasmachine_status:
+        name: wasmachine_status
+        options:
+          - uit
+          - bezig
+        initial: uit
