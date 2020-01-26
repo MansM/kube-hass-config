@@ -31,6 +31,16 @@ sensor:
       - path: 'containous/traefik'
 
   - platform: thinkingcleaner
+
+  - platform: netdata
+    host: '10.0.2.237'
+    port: '19999'
+    name: r710top.localdomain
+    resources:
+      cpu:
+        data_group: system.cpu
+        element: idle
+        invert: true
 # http:
 # frontend:
 switch:
