@@ -31,10 +31,6 @@ sensor:
       - path: 'containous/traefik'
 
   - platform: thinkingcleaner
-
-  - platform: postnl
-    username: !secret postnl.user
-    password: !secret postnl.pass
 # http:
 # frontend:
 switch:
