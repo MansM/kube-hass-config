@@ -7,8 +7,7 @@ homeassistant:
   longitude: !secret longitude
   time_zone: Europe/Amsterdam
   packages:
-    vacation: !include packages/vacation.yaml
-    wasmachine: !include packages/wasmachine.yaml
+    packages: !include_dir_named packages
   customize: !include customize.yaml
 
 default_config:
