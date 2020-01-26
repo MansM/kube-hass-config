@@ -124,6 +124,13 @@ views:
       - type: plant-status
         entity: plant.keuken_plant
         name: Paprika (keuken)
+
+      - type: entities
+        title: wasmachine
+        show_header_toggle: false
+        entities:
+          - sensor.wasmachine_status
+          - switch.nodeID_11_switch
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace
