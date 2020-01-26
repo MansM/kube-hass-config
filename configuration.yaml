@@ -95,4 +95,9 @@ plant:
       conductivity: sensor.mi_flora_conductivity
       brightness: sensor.mi_flora_light_intensity
     min_moisture: 20
+
+cast:
+  media_player:
+    - host: 10.0.2.75
+
   
