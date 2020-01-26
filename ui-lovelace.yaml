@@ -130,7 +130,7 @@ views:
         show_header_toggle: false
         entities:
           - sensor.wasmachine_status
-          - switch.nodeID_11_switch
+          - switch.nodeid_11_switch
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace
