@@ -6,8 +6,7 @@ homeassistant:
   latitude: !secret latitude
   longitude: !secret longitude
   time_zone: Europe/Amsterdam
-  packages:
-    packages: !include_dir_named packages
+  packages: !include_dir_named packages
   customize: !include customize.yaml
 
 default_config:
