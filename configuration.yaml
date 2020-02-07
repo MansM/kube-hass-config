@@ -33,7 +33,7 @@ sensor:
   - platform: thinkingcleaner
 
   - platform: netdata
-    host: '10.0.2.237'
+    host: '10.0.2.24'
     port: '19999'
     name: r710top.localdomain
     resources:
@@ -83,7 +83,7 @@ camera:
     verify_ssl: false
   
 mqtt:
-  broker: !secret mqtt.ip
+  broker: mosquitto.mqtt.svc
   discovery: true
 
 plant:
