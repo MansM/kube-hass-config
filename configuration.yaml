@@ -35,7 +35,7 @@ sensor:
   - platform: netdata
     host: '10.0.2.24'
     port: '19999'
-    name: r710top.localdomain
+    name: r710top
     resources:
       cpu:
         data_group: system.cpu
@@ -99,5 +99,9 @@ plant:
 cast:
   media_player:
     - host: 10.0.2.75
+
+recorder:
+  purge_keep_days: 14
+  db_url: !secret postgres.url
 
   
