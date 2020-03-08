@@ -105,5 +105,7 @@ cast:
 recorder:
   purge_keep_days: 14
   db_url: !secret postgres.url
+  db_max_retries: 50
+  db_retry_wait: 10
 
   
