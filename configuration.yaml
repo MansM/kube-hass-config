@@ -88,6 +88,10 @@ mqtt:
   broker: mosquitto.mqtt.svc
   discovery: true
 
+octoprint:
+  host: !secret octoprint.host
+  api_key: !secret octoprint.apikey
+
 plant:
   keuken_plant:
     sensors:
