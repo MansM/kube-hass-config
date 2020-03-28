@@ -91,6 +91,13 @@ mqtt:
 octoprint:
   host: !secret octoprint.host
   api_key: !secret octoprint.apikey
+  sensors:
+    monitored_conditions:
+      - 'Current State'
+      - 'Job Percentage'
+      - 'Temperatures'
+      - 'Time Elapsed'
+      - 'Time Remaining'
 
 plant:
   keuken_plant:
