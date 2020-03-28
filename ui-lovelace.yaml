@@ -131,6 +131,26 @@ views:
         entities:
           - sensor.wasmachine_status
           - switch.nodeid_11_switch
+
+      - type: entities
+        id: octoprint
+        title: OctoPrint
+        show_header_toggle: false
+        entities:
+          - entity: light.3d_printer
+            secondary_info: last-changed
+          - sensor.3d_printer
+          - binary_sensor.octoprint_printing
+          - binary_sensor.octoprint_printing_error
+          - entity: sensor.octoprint_current_state
+            secondary_info: last-changed
+          - sensor.octoprint_job_percentage
+          - sensor.octoprint_time_remaining_format
+          - sensor.octoprint_time_elapsed_format
+          - sensor.octoprint_actual_bed_temp
+          - sensor.octoprint_target_bed_temp
+          - sensor.octoprint_actual_tool0_temp
+          - sensor.octoprint_target_tool0_temp
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace
