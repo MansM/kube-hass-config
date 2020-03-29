@@ -156,6 +156,7 @@ mqtt:
 octoprint:
   host: !secret octoprint.host
   api_key: !secret octoprint.apikey
+  number_of_tools: 2
   sensors:
     monitored_conditions:
       - 'Current State'
