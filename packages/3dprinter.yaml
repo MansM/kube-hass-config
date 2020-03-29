@@ -28,7 +28,12 @@ automation:
         for:
           seconds: 30
     action:
+      - service: shell_command.shutdown_octopi
+      - delay: '00:01:00'
       - service: switch.turn_off
         entity_id: switch.nodeid_10_switch
       - service: switch.turn_off
         entity_id: switch.octopi
+
+shell_command:
+  shutdown_octopi: curl -X POST -H "X-Api-Key: !secrets octopi.apikey" !secrets octoprint.shutdownurl
