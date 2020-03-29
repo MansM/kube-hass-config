@@ -152,6 +152,17 @@ views:
           - sensor.octoprint_target_bed_temp
           - sensor.octoprint_actual_tool0_temp
           - sensor.octoprint_target_tool0_temp
+
+      - type: conditional
+        conditions:
+          - entity: input_boolean.3dprinter
+            state: "on"
+        card:
+          type: picture-glance
+          title: Octoprint
+          entities: []
+          camera_image: camera.octoprint
+        
       #   # The markdown card will render markdown text.
       # - type: markdown
       #   title: Lovelace

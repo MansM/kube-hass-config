@@ -148,6 +148,11 @@ camera:
     still_image_url: !secret camera.snap
     stream_source: !secret camera.url
     verify_ssl: false
+
+  - platform: mjpeg
+    name: octoprint
+    still_image_url: !secret octoprint.camera.snap
+    mjpeg_url: !secret octoprint.camera.url
   
 mqtt:
   broker: mosquitto.mqtt.svc
