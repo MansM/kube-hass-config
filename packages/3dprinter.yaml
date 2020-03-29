@@ -37,3 +37,4 @@ automation:
 
 shell_command:
   shutdown_octopi: !secret octoprint.shutdown
+  #"curl -X POST -H 'X-Api-Key: XYZ' http://<LOCATION>/api/system/commands/core/shutdown"
