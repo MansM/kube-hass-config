@@ -36,4 +36,4 @@ automation:
         entity_id: switch.octopi
 
 shell_command:
-  shutdown_octopi: curl -X POST -H "X-Api-Key: !secrets octopi.apikey" !secrets octoprint.shutdownurl
+  shutdown_octopi: "curl -X POST -H 'X-Api-Key: !secrets octopi.apikey' !secrets octoprint.shutdownurl"
