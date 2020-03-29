@@ -36,4 +36,4 @@ automation:
         entity_id: switch.octopi
 
 shell_command:
-  shutdown_octopi: !secrets octoprint.shutdown
+  shutdown_octopi: !secret octoprint.shutdown
