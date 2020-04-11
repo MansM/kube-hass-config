@@ -1,0 +1,11 @@
+automation:
+  - alias: turn_off_outside_lights_when_solar_power
+    trigger: 
+      - platform: numeric_state
+        entity_id: sensor.growatt_total_output_power
+        above: 5
+        for:
+          minutes: 10
+    action:
+      - service: light.turn_off
+        entity_id: light.buitenlamp
