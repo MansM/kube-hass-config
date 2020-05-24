@@ -24,7 +24,7 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - entity: sensor.nodeid_9_temperature
+          - entity: !secret zwave.rookmelder_temp
             name: Rookmelder
             icon: mdi:smoke-detector
           - entity: sensor.mi_flora_temperature
@@ -146,7 +146,7 @@ views:
           - sensor.octoprint_job_percentage
           - sensor.octoprint_time_remaining_format
           - sensor.octoprint_time_elapsed_format
-          - entity: sensor.nodeid_10_power_4
+          - entity: !secret zwave.sensor_node10
             name: Power Usage
             icon: mdi:flash
           - sensor.octoprint_actual_bed_temp
