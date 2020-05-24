@@ -38,10 +38,14 @@ automation:
       - service: notify.woonkamer_tv
         data:
           message: "Was is klaar!"
-      # - service: notify.slack
-      #   data:
-      #     target: "wasmachine"
-      #     message: "Was is klaar!"
+      - service: notify.mobile_app_iphone_van_mans
+        data:
+          title: "wasmachine"
+          message: "Was is klaar!"
+      - service: notify.mobile_app_cat7
+        data:
+          title: "wasmachine"
+          message: "Was is klaar!"
 sensor:
   - platform: template
     sensors:

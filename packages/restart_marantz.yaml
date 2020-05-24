@@ -1,0 +1,21 @@
+input_boolean:
+  restart_marantz:
+    name: Marantz Restart
+    initial: off
+
+automation:   
+  - alias: Marantz Restart
+    trigger: 
+      - platform: state
+        entity_id: input_boolean.restart_marantz
+        from: 'off'
+        to: 'on'
+        for:
+          seconds: 10
+    action:
+      - service: switch.turn_off
+        entity_id: switch.nodeid_10_switch
+      - delay:
+          minutes: 1
+      - service: switch.turn_on
+        entity_id: switch.nodeid_10_switch

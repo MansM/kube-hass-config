@@ -105,6 +105,7 @@ views:
         # Each entry is an entity ID or a map with extra options.
         entities:
           - input_boolean.vak_mode
+          - input_boolean.restart_marantz
       #     - switch.ac
       #     - entity: light.living_room
       #       # Override the name to use
