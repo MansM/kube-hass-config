@@ -14,8 +14,8 @@ automation:
           seconds: 10
     action:
       - service: switch.turn_off
-        entity_id: switch.nodeid_10_switch
+        entity_id: !secret zwave.switch_node10
       - delay:
           minutes: 1
       - service: switch.turn_on
-        entity_id: switch.nodeid_10_switch
+        entity_id: !secret zwave.switch_node10
