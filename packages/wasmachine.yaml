@@ -49,7 +49,8 @@ automation:
 sensor:
   - platform: template
     sensors:
-      wasmachine_power: !secret zwave.sensor_node11
+      wasmachine_power: 
+        value_template: !secret zwave.sensor_node11
 
   - platform: template
     sensors:
