@@ -48,7 +48,7 @@ sensor:
       rookmeldertemp:
         friendly_name: 'Rookmelder temperatuur'
         unit_of_measurement: '°C'
-        value_template: "{{ float(sensor.nodeid_9_temperature_air) }}"
+        value_template: "{{ float(states.sensor.nodeid_9_temperature_air) }}"
 
   
 # http:
