@@ -24,7 +24,7 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - entity: !secret zwave.rookmelder_temp
+          - entity: sensor.rookmeldertemp
             name: Rookmelder
             icon: mdi:smoke-detector
           - entity: sensor.mi_flora_temperature
