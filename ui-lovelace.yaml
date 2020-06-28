@@ -131,7 +131,7 @@ views:
         show_header_toggle: false
         entities:
           - sensor.wasmachine_status
-          - !secret zwave.sensor_node11
+          - sensor.wasmachineverbruik
 
       - type: entities
         id: octoprint

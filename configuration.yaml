@@ -49,6 +49,10 @@ sensor:
         friendly_name: 'Rookmelder temperatuur'
         unit_of_measurement: '°C'
         value_template: "{{ float(states.sensor.nodeid_9_temperature_air.state.split(';')[0])}}"
+      wasmachineverbruik:
+        friendly_name: 'Verbruik wasmachine'
+        unit_of_measurement: 'W'
+        value_template: "{{ float(states.sensor.nodeid_11_electricity_power.state.split(';')[0])}}"
 
   
 # http:
