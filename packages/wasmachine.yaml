@@ -2,7 +2,7 @@ automation:
   - alias: set wasmachine op bezig
     trigger: 
       - platform: numeric_state
-        entity_id: !secret zwave.sensor_node11
+        entity_id: sensor.wasmachine_power
         above: 5
     condition:
       condition: and
