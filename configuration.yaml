@@ -72,6 +72,56 @@ person:
     device_trackers:
       - device_tracker.cat7
 
+climate:
+  - platform: mqtt
+
+    # Change to whatever you want
+    name: Gree HVAC
+
+    # Change homeassistant/greehvac to what you've set in addon options
+    current_temperature_topic: "homeassistant/greehvac/temperature/get"
+    temperature_command_topic: "homeassistant/greehvac/temperature/set"
+    temperature_state_topic: "homeassistant/greehvac/temperature/get"
+    mode_state_topic: "homeassistant/greehvac/mode/get"
+    mode_command_topic: "homeassistant/greehvac/mode/set"
+    fan_mode_state_topic: "homeassistant/greehvac/fanspeed/get"
+    fan_mode_command_topic: "homeassistant/greehvac/fanspeed/set"
+    swing_mode_state_topic: "homeassistant/greehvac/swingvert/get"
+    swing_mode_command_topic: "homeassistant/greehvac/swingvert/set"
+    power_state_topic: "homeassistant/greehvac/power/get"
+    power_command_topic: "homeassistant/greehvac/power/set"
+
+    # Keep the following as is
+    payload_off: 0
+    payload_on: 1
+    modes:
+      - "off"
+      - "auto"
+      - "cool"
+      - "heat"
+      - "dry"
+      - "fan_only"
+    swing_modes:
+      - "default"
+      - "full"
+      - "fixedTop"
+      - "fixedMidTop"
+      - "fixedMid"
+      - "fixedMidBottom"
+      - "fixedBottom"
+      - "swingBottom"
+      - "swingMidBottom"
+      - "swingMid"
+      - "swingMidTop"
+      - "swingTop"
+    fan_modes:
+      - "auto"
+      - "low"
+      - "mediumLow"
+      - "medium"
+      - "mediumHigh"
+      - "high"
+      
 webostv:
   name: Woonkamer TV
   host: !secret tv.ip
