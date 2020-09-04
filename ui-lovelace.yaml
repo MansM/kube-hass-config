@@ -43,14 +43,14 @@ views:
           type: entities
           entities:
             - entity: person.mans
-            - entity: sensor.battery_level
+            - entity: sensor.iphone_van_mans_battery_level_2
           show_header_toggle: false
           
         - title: Rianne
           type: entities
           entities:
             - entity: person.rianne_2
-            - entity: sensor.battery_level_2
+            - entity: sensor.cat7_battery_level
           show_header_toggle: false
 
       - title: Solar Panels
