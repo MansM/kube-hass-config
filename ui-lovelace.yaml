@@ -106,6 +106,7 @@ views:
         entities:
           - input_boolean.vak_mode
           - input_boolean.restart_marantz
+          - input_boolean.power_marantz
       #     - switch.ac
       #     - entity: light.living_room
       #       # Override the name to use

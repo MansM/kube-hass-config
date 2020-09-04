@@ -2,6 +2,10 @@ input_boolean:
   restart_marantz:
     name: Marantz Restart
     initial: off
+  
+  power_marantz:
+    name: Marantz Power
+
 
 automation:   
   - alias: Marantz Restart
@@ -17,5 +21,31 @@ automation:
         entity_id: !secret zwave.switch_node6
       - delay:
           minutes: 1
+      - service: switch.turn_on
+        entity_id: !secret zwave.switch_node6
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.restart_marantz
+
+  - alias: Marantz off
+    trigger: 
+      - platform: state
+        entity_id: input_boolean.power_marantz
+        from: 'on'
+        to: 'off'
+        for:
+          seconds: 10
+    action:
+      - service: switch.turn_off
+        entity_id: !secret zwave.switch_node6
+
+  - alias: Marantz on
+    trigger: 
+      - platform: state
+        entity_id: input_boolean.power_marantz
+        from: 'off'
+        to: 'on'
+        for:
+          seconds: 10
+    action:
       - service: switch.turn_on
         entity_id: !secret zwave.switch_node6
