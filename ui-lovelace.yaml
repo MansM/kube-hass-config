@@ -49,7 +49,7 @@ views:
         - title: Rianne
           type: entities
           entities:
-            - entity: person.rianne_2
+            - entity: person.rianne
             - entity: sensor.cat7_battery_level
           show_header_toggle: false
 
