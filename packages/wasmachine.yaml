@@ -2,7 +2,7 @@ automation:
   - alias: set wasmachine op bezig
     trigger: 
       - platform: numeric_state
-        entity_id: sensor.wasmachine_power
+        entity_id: sensor.wasmachineverbruik
         above: 5
     condition:
       condition: and
@@ -59,7 +59,7 @@ sensor:
         friendly_name: 'Wasmachine status'
       wasmachine_klaar:
         value_template: > 
-          {%- if (states("sensor.wasmachine_power")| float ) < 5 -%} 
+          {%- if (states("sensor.wasmachineverbruik")| float ) < 5 -%} 
             true
           {%- else -%}
             false
