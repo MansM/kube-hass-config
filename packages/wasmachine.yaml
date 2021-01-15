@@ -35,9 +35,6 @@ automation:
         data:
           entity_id: input_select.wasmachine_status
           option: uit
-      - service: notify.woonkamer_tv
-        data:
-          message: "Was is klaar!"
       - service: notify.mobile_app_iphone_van_mans
         data:
           title: "wasmachine"
@@ -45,6 +42,9 @@ automation:
       - service: notify.mobile_app_cat7
         data:
           title: "wasmachine"
+          message: "Was is klaar!"
+      - service: notify.woonkamer_tv
+        data:
           message: "Was is klaar!"
 sensor:
   - platform: template
