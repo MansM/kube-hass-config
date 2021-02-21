@@ -14,8 +14,8 @@ automation:
         entity_id: input_boolean.restart_marantz
         from: 'off'
         to: 'on'
-        for:
-          seconds: 10
+        # for:
+        #   seconds: 10
     action:
       - service: switch.turn_off
         entity_id: !secret zwave.switch_node6
@@ -32,8 +32,6 @@ automation:
         entity_id: input_boolean.power_marantz
         from: 'on'
         to: 'off'
-        for:
-          seconds: 10
     action:
       - service: switch.turn_off
         entity_id: !secret zwave.switch_node6
@@ -44,8 +42,6 @@ automation:
         entity_id: input_boolean.power_marantz
         from: 'off'
         to: 'on'
-        for:
-          seconds: 10
     action:
       - service: switch.turn_on
         entity_id: !secret zwave.switch_node6
