@@ -1,7 +1,7 @@
 tv:
   entities:
-    - light.ikea_links
-    - light.ikea_rechts_nieuw
+    - light.hue_color_lamp_1
+    - light.hue_color_lamp_2
 
 salontafel:
   entities:

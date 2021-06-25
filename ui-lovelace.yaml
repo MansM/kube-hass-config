@@ -20,16 +20,20 @@ views:
           - group.eettafel
         show_header_toggle: false
 
-      - title: Temperatuur Woonkamer
+      - title: Temperaturen
         type: entities
         show_header_toggle: false
         entities:
           - entity: sensor.rookmeldertemp
             name: Rookmelder
             icon: mdi:smoke-detector
+          - entity: sensor.hue_motion_sensor_1_temperature
+            name: motion sensor keuken
+            icon: mdi:stove
           - entity: sensor.mi_flora_temperature
             name: Mi Flora
             icon: mdi:flower
+          
 
       - title: Weer thuis
         type: weather-forecast
