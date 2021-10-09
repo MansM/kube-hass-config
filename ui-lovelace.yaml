@@ -24,6 +24,14 @@ views:
         type: entities
         show_header_toggle: false
         entities:
+          - scene.overdag
+          - scene.open
+          - scene.dicht
+          
+      - title: Temperaturen
+        type: entities
+        show_header_toggle: false
+        entities:
           - entity: sensor.rookmeldertemp
             name: Rookmelder
             icon: mdi:smoke-detector
@@ -47,7 +55,7 @@ views:
           type: entities
           entities:
             - entity: person.mans
-            - entity: sensor.iphone_van_mans_5_battery_level
+            - entity: sensor.iphone_van_mans_battery_level
           show_header_toggle: false
           
         - title: Rianne
