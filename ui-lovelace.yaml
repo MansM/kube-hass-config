@@ -49,7 +49,10 @@ views:
       - type: sensor
         entity: sensor.hue_motion_sensor_2_temperature
         name: temp slaapkamer
-          
+        graph: line
+        limits:
+          min: 10
+          max: 40
 
       - title: Weer thuis
         type: weather-forecast
