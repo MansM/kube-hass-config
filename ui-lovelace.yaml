@@ -20,14 +20,16 @@ views:
           - group.eettafel
         show_header_toggle: false
 
-      - title: Temperaturen
+      - title: Gordijn keuken
         type: entities
         show_header_toggle: false
         entities:
           - scene.overdag
           - scene.open
           - scene.dicht
-          
+          - sensor.product_1_battery
+          - cover.product_1
+
       - title: Temperaturen
         type: entities
         show_header_toggle: false
@@ -41,6 +43,9 @@ views:
           - entity: sensor.mi_flora_temperature
             name: Mi Flora
             icon: mdi:flower
+          - entity: sensor.hue_motion_sensor_2_temperature
+            name: motion sensor keuken
+            icon: mdi:bed-king
           
 
       - title: Weer thuis
