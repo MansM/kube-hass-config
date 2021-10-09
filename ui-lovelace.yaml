@@ -45,9 +45,10 @@ views:
           - entity: sensor.hue_motion_sensor_2_temperature
             name: temp slaapkamer.
             icon: mdi:bed-king
-          - type: sensor
-            entity: sensor.hue_motion_sensor_2_temperature
-            name: temp slaapkamer
+           
+      - type: sensor
+        entity: sensor.hue_motion_sensor_2_temperature
+        name: temp slaapkamer
           
 
       - title: Weer thuis
