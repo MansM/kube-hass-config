@@ -10,7 +10,7 @@ homeassistant:
   customize: !include customize.yaml
 
 default_config:
-group:          !include_dir_merge_named groups
+group: !include_dir_merge_named groups
 stream:
 
 http:

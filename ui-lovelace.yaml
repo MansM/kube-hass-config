@@ -47,7 +47,7 @@ views:
           type: entities
           entities:
             - entity: person.mans
-            - entity: sensor.iphone_van_mans_battery_level_5
+            - entity: sensor.iphone_van_mans_5_battery_level
           show_header_toggle: false
           
         - title: Rianne
