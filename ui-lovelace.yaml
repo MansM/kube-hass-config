@@ -39,6 +39,9 @@ views:
           - entity: sensor.hue_motion_sensor_1_temperature
             name: motion sensor keuken
             icon: mdi:stove
+          - entity: sensor.hue_motion_sensor_3_temperature
+            name: motion sensor computer
+            icon: mdi:stove
           - entity: sensor.mi_flora_temperature
             name: Mi Flora
             icon: mdi:flower
@@ -53,6 +56,10 @@ views:
         limits:
           min: 10
           max: 40
+      - type: sensor
+        entity: sensor.hue_motion_sensor_3_temperature
+        name: temp werkplek Rianne
+        graph: line
 
       - title: Weer thuis
         type: weather-forecast
