@@ -3,8 +3,19 @@ automation:
     trigger:
       platform: template
       value_template: "{{ now().timestamp() - states.sensor.growatt_total_output_power.last_updated.timestamp() > 900 }}"
+    condition:
+      - condition: sun
+        after: sunrise
+        before: sunset
     action:
-      service: persistent_notification.create
-      data:
-        title: 'Growatt value is stale.'
-        message: 'Value has not been updated in over 900 seconds.'
+      - service: persistent_notification.create
+        data:
+          title: 'Growatt value is stale.'
+          message: 'Value has not been updated in over 900 seconds.'
+      - rest_command:
+        reload_sms:
+          url: !secret growatt.reloadurl
+          method: POST
+          headers:
+            authorization: !secret restart.token
+            content-type: application/json
