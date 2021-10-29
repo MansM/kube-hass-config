@@ -59,7 +59,7 @@ sensor:
         friendly_name: 'Wasmachine status'
       wasmachine_klaar:
         value_template: > 
-          {%- if (states("sensor.wasmachineverbruik")| float ) < 5 -%} 
+          {%- if (states("sensor.wasmachineverbruik")| float(0) ) < 5 -%} 
             true
           {%- else -%}
             false
