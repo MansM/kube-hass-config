@@ -1,0 +1,11 @@
+automation:
+  - alias: 'Growatt state'
+    trigger:
+      platform: template
+      entity_id: sensor.time
+      value_template: "{{ now().timestamp() - states.sensor.growatt_total_output_power.last_updated.timestamp() > 900 }}"
+    action:
+      service: persistent_notification.create
+      data:
+        title: 'Growatt value is stale.'
+        message: 'Value has not been updated in over 900 seconds.'
