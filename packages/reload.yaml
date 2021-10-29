@@ -12,10 +12,13 @@ automation:
         data:
           title: 'Growatt value is stale.'
           message: 'Value has not been updated in over 900 seconds.'
-      - rest_command:
-        reload_sms:
-          url: !secret growatt.reloadurl
-          method: POST
-          headers:
-            authorization: !secret restart.token
-            content-type: application/json
+      - service: rest_command.reload_growatt
+        data: {}
+
+rest_command:
+  reload_growatt:
+    url: !secret growatt.reloadurl
+    method: POST
+    headers:
+      authorization: !secret restart.token
+      content-type: application/json
