@@ -14,6 +14,13 @@ automation:
           message: 'Value has not been updated in over 900 seconds.'
       - service: rest_command.reload_growatt
         data: {}
+  
+  - alias: 'Restart HA'
+    trigger:
+      platform: time
+      at: '3:30:00'
+    action:
+      - service: homeassistant.restart
 
 rest_command:
   reload_growatt:
@@ -22,3 +29,4 @@ rest_command:
     headers:
       authorization: !secret restart.token
       content-type: application/json
+

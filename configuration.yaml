@@ -29,11 +29,11 @@ sensor:
     username: !secret growatt.user
     password: !secret growatt.pass
   
-  - platform: github
-    access_token: !secret github_access_token
-    repositories:
-      - path: 'home-assistant/home-assistant'
-      - path: 'containous/traefik'
+  # - platform: github
+  #   access_token: !secret github_access_token
+  #   repositories:
+  #     - path: 'home-assistant/home-assistant'
+  #     - path: 'containous/traefik'
 
   - platform: thinkingcleaner
     host: 10.0.2.206
