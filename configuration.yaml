@@ -127,9 +127,9 @@ climate:
       - "mediumHigh"
       - "high"
       
-webostv:
-  name: Woonkamer TV
-  host: !secret tv.ip
+# webostv:
+#   name: Woonkamer TV
+#   host: !secret tv.ip
 
   # - platform: denon
   #   name: marantz_sr7005

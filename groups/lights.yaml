@@ -11,3 +11,9 @@ eettafel:
   entities:
     - light.hue_color_pendant_down_1
     - light.hue_color_pendant_up_1
+
+tuinpad:
+  entities:
+    - light.hue_outdoor_pedestal_1
+    - light.hue_outdoor_pedestal_2
+    - light.hue_outdoor_pedestal_3
