@@ -128,7 +128,7 @@ climate:
       - "high"
       
 webostv:
-#   name: Woonkamer TV
+  name: Woonkamer TV
   host: !secret tv.ip
 
   # - platform: denon
