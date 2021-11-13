@@ -127,7 +127,7 @@ climate:
       - "mediumHigh"
       - "high"
       
-# webostv:
+webostv:
 #   name: Woonkamer TV
 #   host: !secret tv.ip
 
