@@ -129,7 +129,7 @@ climate:
       
 webostv:
 #   name: Woonkamer TV
-#   host: !secret tv.ip
+  host: !secret tv.ip
 
   # - platform: denon
   #   name: marantz_sr7005
