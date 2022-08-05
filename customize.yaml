@@ -10,3 +10,5 @@ group.eettafel:
   friendly_name: Eettafel
 group.salontafel:
   friendly_name: Salontafel
+cover.0:
+  device_class: shutter
