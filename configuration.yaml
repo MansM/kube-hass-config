@@ -136,9 +136,12 @@ webostv:
   #   host: !secret marantz.ip
   #   #mac: !secret marantz.mac
 
-lovelace:
-  mode: yaml
+# lovelace:
+#   mode: yaml
 
+velux:
+  host: 10.0.2.89
+  password: !secret velux.pass
 # notify:
 #   - platform: webostv
 #     host: !secret tv.ip
