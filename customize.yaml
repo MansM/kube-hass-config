@@ -12,3 +12,5 @@ group.salontafel:
   friendly_name: Salontafel
 cover.0:
   device_class: shutter
+scene.open_2:
+  entity_picture: mdi:window-shutter-open
