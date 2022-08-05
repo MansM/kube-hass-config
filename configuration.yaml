@@ -64,7 +64,7 @@ sensor:
 # frontend:
 switch:
   - platform: thinkingcleaner
-    host: 10.0.2.206
+    host: 10.0.2.67
 
 person:
   - name: mans
