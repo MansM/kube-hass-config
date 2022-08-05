@@ -1,106 +1,106 @@
-input_boolean:
-  3dprinter:
-    name: 3D Printer
-    #initial: off
-    icon: mdi:printer-3d
+# input_boolean:
+#   3dprinter:
+#     name: 3D Printer
+#     #initial: off
+#     icon: mdi:printer-3d
 
-automation:
-  - alias: 3dprinter_on
-    trigger: 
-      - platform: state
-        entity_id: input_boolean.3dprinter
-        from: 'off'
-        to: 'on'
-        for:
-          seconds: 10
-    action:
-      - service: switch.turn_on
-        entity_id: switch.nodeid_10_switch
-      - service: switch.turn_on
-        entity_id: switch.octopi
+# automation:
+#   - alias: 3dprinter_on
+#     trigger: 
+#       - platform: state
+#         entity_id: input_boolean.3dprinter
+#         from: 'off'
+#         to: 'on'
+#         for:
+#           seconds: 10
+#     action:
+#       - service: switch.turn_on
+#         entity_id: switch.nodeid_10_switch
+#       - service: switch.turn_on
+#         entity_id: switch.octopi
       
-  - alias: 3dprinter_off
-    trigger: 
-      - platform: state
-        entity_id: input_boolean.3dprinter
-        from: 'on'
-        to: 'off'
-        for:
-          seconds: 30
-    action:
-      - service: shell_command.shutdown_octopi
-      - delay: '00:01:00'
-      - service: switch.turn_off
-        entity_id: switch.nodeid_10_switch
-      - service: switch.turn_off
-        entity_id: switch.octopi
+#   - alias: 3dprinter_off
+#     trigger: 
+#       - platform: state
+#         entity_id: input_boolean.3dprinter
+#         from: 'on'
+#         to: 'off'
+#         for:
+#           seconds: 30
+#     action:
+#       - service: shell_command.shutdown_octopi
+#       - delay: '00:01:00'
+#       - service: switch.turn_off
+#         entity_id: switch.nodeid_10_switch
+#       - service: switch.turn_off
+#         entity_id: switch.octopi
 
-shell_command:
-  shutdown_octopi: !secret octoprint.shutdown
-  #"curl -X POST -H 'X-Api-Key: XYZ' http://<LOCATION>/api/system/commands/core/shutdown"
+# shell_command:
+#   shutdown_octopi: !secret octoprint.shutdown
+#   #"curl -X POST -H 'X-Api-Key: XYZ' http://<LOCATION>/api/system/commands/core/shutdown"
 
-sensor:
-  - platform: template
-    sensors:
-      octoprint_time_elapsed_format:
-        friendly_name: 'Printing Time Elapsed'
-        value_template: >-
-           {% set etime = states.sensor.octoprint_time_elapsed.state | int %}
-           {% set seconds = etime % 60 %}
-           {% set minutes = ((etime % 3600) / 60) | int %}
-           {% set hours = ((etime % 86400) / 3600) | int %}
-           {% set days = (etime / 86400) | int %}
-           {%- if days > 0 -%}
-             {%- if days == 1 -%}
-               1 day
-             {%- else -%}
-               {{ days }} days
-             {%- endif -%}
-             {{ ', ' }}
-           {%- endif -%}
-           {%- if hours > 0 -%}
-             {%- if hours == 1 -%}
-               1 hour
-             {%- else -%}
-               {{ hours }} hours
-             {%- endif -%}
-             {{ ', ' }}
-           {%- endif -%}
-           {%- if minutes > 0 -%}
-             {%- if minutes == 1 -%}
-               1 minute
-             {%- else -%}
-               {{ minutes }} minutes
-             {%- endif -%}
-           {%- endif -%}
-      octoprint_time_remaining_format:
-        friendly_name: 'Printing Time Remaining'
-        value_template: >-
-          {% set rtime = states.sensor.octoprint_time_remaining.state | int %}
-          {% set seconds = rtime % 60 %}
-          {% set minutes = ((rtime % 3600) / 60) | int %}
-          {% set hours = ((rtime % 86400) / 3600) | int %}
-          {% set days = (rtime / 86400) | int %}
-          {%- if days > 0 -%}
-            {%- if days == 1 -%}
-              1 day
-            {%- else -%}
-              {{ days }} days
-            {%- endif -%}
-            {{ ', ' }}
-          {%- endif -%}
-          {%- if hours > 0 -%}
-            {%- if hours == 1 -%}
-              1 hour
-            {%- else -%}
-              {{ hours }} hours
-            {%- endif -%}
-            {{ ', ' }}
-          {%- endif -%}
-          {%- if minutes > 0 -%}
-            {%- if minutes == 1 -%}
-              1 minute
-            {%- else -%}
-              {{ minutes }} minutes
-            {%- endif -%}
-          {%- endif -%}
+# sensor:
+#   - platform: template
+#     sensors:
+#       octoprint_time_elapsed_format:
+#         friendly_name: 'Printing Time Elapsed'
+#         value_template: >-
+#            {% set etime = states.sensor.octoprint_time_elapsed.state | int %}
+#            {% set seconds = etime % 60 %}
+#            {% set minutes = ((etime % 3600) / 60) | int %}
+#            {% set hours = ((etime % 86400) / 3600) | int %}
+#            {% set days = (etime / 86400) | int %}
+#            {%- if days > 0 -%}
+#              {%- if days == 1 -%}
+#                1 day
+#              {%- else -%}
+#                {{ days }} days
+#              {%- endif -%}
+#              {{ ', ' }}
+#            {%- endif -%}
+#            {%- if hours > 0 -%}
+#              {%- if hours == 1 -%}
+#                1 hour
+#              {%- else -%}
+#                {{ hours }} hours
+#              {%- endif -%}
+#              {{ ', ' }}
+#            {%- endif -%}
+#            {%- if minutes > 0 -%}
+#              {%- if minutes == 1 -%}
+#                1 minute
+#              {%- else -%}
+#                {{ minutes }} minutes
+#              {%- endif -%}
+#            {%- endif -%}
+#       octoprint_time_remaining_format:
+#         friendly_name: 'Printing Time Remaining'
+#         value_template: >-
+#           {% set rtime = states.sensor.octoprint_time_remaining.state | int %}
+#           {% set seconds = rtime % 60 %}
+#           {% set minutes = ((rtime % 3600) / 60) | int %}
+#           {% set hours = ((rtime % 86400) / 3600) | int %}
+#           {% set days = (rtime / 86400) | int %}
+#           {%- if days > 0 -%}
+#             {%- if days == 1 -%}
+#               1 day
+#             {%- else -%}
+#               {{ days }} days
+#             {%- endif -%}
+#             {{ ', ' }}
+#           {%- endif -%}
+#           {%- if hours > 0 -%}
+#             {%- if hours == 1 -%}
+#               1 hour
+#             {%- else -%}
+#               {{ hours }} hours
+#             {%- endif -%}
+#             {{ ', ' }}
+#           {%- endif -%}
+#           {%- if minutes > 0 -%}
+#             {%- if minutes == 1 -%}
+#               1 minute
+#             {%- else -%}
+#               {{ minutes }} minutes
+#             {%- endif -%}
+#           {%- endif -%}

@@ -164,18 +164,18 @@ mqtt:
   broker: mosquitto.mqtt.svc
   discovery: true
 
-octoprint:
-  host: !secret octoprint.host
-  api_key: !secret octoprint.apikey
-  bed: true
-  number_of_tools: 1
-  sensors:
-    monitored_conditions:
-      - 'Current State'
-      - 'Job Percentage'
-      - 'Temperatures'
-      - 'Time Elapsed'
-      - 'Time Remaining'
+# octoprint:
+#   host: !secret octoprint.host
+#   api_key: !secret octoprint.apikey
+#   bed: true
+#   number_of_tools: 1
+#   sensors:
+#     monitored_conditions:
+#       - 'Current State'
+#       - 'Job Percentage'
+#       - 'Temperatures'
+#       - 'Time Elapsed'
+#       - 'Time Remaining'
 
 plant:
   keuken_plant:
