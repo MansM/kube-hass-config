@@ -15,12 +15,27 @@ automation:
       - service: rest_command.reload_growatt
         data: {}
   
-  - alias: 'Restart HA'
+  # - alias: 'Restart HA'
+  #   trigger:
+  #     platform: time
+  #     at: '3:30:00'
+  #   action:
+  #     - service: homeassistant.restart
+
+  - alias: 'Restart velux nacht'
     trigger:
       platform: time
       at: '3:30:00'
     action:
-      - service: homeassistant.restart
+      - service: velux.reboot_gateway
+
+  # - alias: 'Restart velux dag'
+  #   trigger:
+  #     platform: time
+  #     at: '15:30:00'
+  #   action:
+  #     - service: velux.reboot_gateway
+
 
 rest_command:
   reload_growatt:
